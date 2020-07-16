@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 from store_data import data_handler
 
 # MQTT Settings 
-MQTT_Broker = "192.168.100.11"
+MQTT_Broker = "192.168.100.22"
 MQTT_Port = 1883
 Keep_Alive_Interval = 45
 MQTT_Topic1 = "Sensor"

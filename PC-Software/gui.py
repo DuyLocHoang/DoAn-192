@@ -16,5 +16,5 @@ class DateTime:
         self.reading = DoubleVar()
         var_name = Label( text = name,font =("consolas", 13, "bold"))
         self.display = Label(textvariable=self.reading, font =("consolas", 13, "bold"))  # we need this Label as a variable
-        self.display.place(x=x+60, y=y, width = 100)
+        self.display.place(x=x+60, y=y, width = 200)
         var_name.place(x=x, y=y)

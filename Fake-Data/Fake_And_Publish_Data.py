@@ -7,7 +7,7 @@ from datetime import datetime
 MQTT_Broker = '192.168.100.22'
 MQTT_Port = 1883
 Keep_Alive_Interval = 60
-MQTT_Topic_Humidity = "Update_Data_Sensor"
+MQTT_Topic_Humidity = "Sensor"
 MQTT_Topic_Temperature = "Control"
 
 #====================================================
@@ -51,11 +51,13 @@ def publish_Fake_Sensor_Values_to_MQTT():
 		Humidity_Data = {}
 		Humidity_Data['PH'] = Humidity_Fake_Value
 		Humidity_Data['EC'] = Humidity_Fake_Value
-		Humidity_Data['TEMP'] = Humidity_Fake_Value
-		Humidity_Data['WaterTemp'] = Humidity_Fake_Value
-		Humidity_Data['HUD'] = Humidity_Fake_Value
-		Humidity_Data['LIGHT'] = Humidity_Fake_Value
-
+		Humidity_Data['Temperature'] = Humidity_Fake_Value
+		Humidity_Data['NuA'] = Humidity_Fake_Value
+		Humidity_Data['NuB'] = Humidity_Fake_Value
+		Humidity_Data['WIn'] = Humidity_Fake_Value
+		Humidity_Data['Humidity'] = Humidity_Fake_Value
+		Humidity_Data['Light'] = Humidity_Fake_Value
+		Humidity_Data['Date'] = Humidity_Fake_Value
 		humidity_json_data = json.dumps(Humidity_Data)
 
 		print( "Gia lap DoAm: " + str(Humidity_Fake_Value) + "...")
@@ -68,7 +70,7 @@ def publish_Fake_Sensor_Values_to_MQTT():
 		Temperature_Data = {}
 		Temperature_Data['Control_Pump1'] = Temperature_Fake_Value
 		Temperature_Data['Control_Pump2'] = Temperature_Fake_Value 
-		Temperature_Data['WaterIn'] = Temperature_Fake_Value
+		Temperature_Data['Control_Water'] = Temperature_Fake_Value
 		temperature_json_data = json.dumps(Temperature_Data)
 
 		print ("Gia lap Nhiet do: " + str(Temperature_Fake_Value) + "...")
